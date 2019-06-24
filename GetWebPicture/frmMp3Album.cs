@@ -378,6 +378,24 @@ namespace Mp3AlbumCoverUpdater
             }
         }
 
+        private void btnUpdateAll_Click(object sender, EventArgs e)
+        {
+            
+            for(int i = 0; i < this.dgvList.Rows.Count; i++)
+            {
+                Mp3File = new Mp3File(dgvList.Rows[i].Cells["Â·¾¶"].Value.ToString());
+                Mp3File.TagHandler.Picture = ptbNew.Image;
+                Mp3File.Update();
+                dgvList.Rows[i].Cells[2].Value = ptbNew.Image;
+                string path = dgvList.Rows[i].Cells[1].Value.ToString();
+                string pathbak = System.IO.Path.GetDirectoryName(path) + "\\" + System.IO.Path.GetFileNameWithoutExtension(path) + ".bak";
+                if (File.Exists(pathbak))
+                {
+                    File.Delete(pathbak);
+                }
+            }
+        }
+
         private void OpenFile_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -529,7 +547,7 @@ namespace Mp3AlbumCoverUpdater
         private void ShowErrorList()
         {
 
-            File.WriteAllLines("E:\\ERROR.TXT", listError.ToArray(), Encoding.Default);
+            File.WriteAllLines("D:\\ERROR.TXT", listError.ToArray(), Encoding.Default);
             //Process.Start("E:\\ERROR.TXT");
             listError.Clear();
         }
@@ -615,5 +633,7 @@ namespace Mp3AlbumCoverUpdater
         {
             System.Diagnostics.Process.Start("https://github.com/liumingye/MP3CoverOnlineUpdate");
         }
+
+
     }
 }

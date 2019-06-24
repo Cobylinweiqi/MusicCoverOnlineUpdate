@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.OpenDir = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnUpdateAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNew)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptpOld)).BeginInit();
@@ -50,30 +51,27 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(888, 10);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(637, 39);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(68, 23);
+            this.btnSearch.Size = new System.Drawing.Size(63, 24);
             this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "开始";
+            this.btnSearch.Text = "搜索";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // txtKeyWord
             // 
-            this.txtKeyWord.Location = new System.Drawing.Point(612, 8);
-            this.txtKeyWord.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKeyWord.Location = new System.Drawing.Point(460, 41);
             this.txtKeyWord.Name = "txtKeyWord";
-            this.txtKeyWord.Size = new System.Drawing.Size(268, 25);
+            this.txtKeyWord.Size = new System.Drawing.Size(170, 21);
             this.txtKeyWord.TabIndex = 2;
             // 
             // ptbNew
             // 
             this.ptbNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ptbNew.Location = new System.Drawing.Point(964, 327);
-            this.ptbNew.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbNew.Location = new System.Drawing.Point(873, 261);
             this.ptbNew.Name = "ptbNew";
-            this.ptbNew.Size = new System.Drawing.Size(319, 323);
+            this.ptbNew.Size = new System.Drawing.Size(240, 259);
             this.ptbNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbNew.TabIndex = 5;
             this.ptbNew.TabStop = false;
@@ -81,12 +79,11 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(1130, 658);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(554, 521);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(153, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(55, 23);
             this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "更  新";
+            this.btnUpdate.Text = "更 新";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -98,8 +95,7 @@
             this.gitHubToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1295, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(971, 22);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -107,24 +103,23 @@
             // OpenFile
             // 
             this.OpenFile.Name = "OpenFile";
-            this.OpenFile.Size = new System.Drawing.Size(96, 24);
+            this.OpenFile.Size = new System.Drawing.Size(80, 18);
             this.OpenFile.Text = "打开文件夹";
             this.OpenFile.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // gitHubToolStripMenuItem
             // 
             this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
-            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(60, 18);
             this.gitHubToolStripMenuItem.Text = "GitHub";
             this.gitHubToolStripMenuItem.Click += new System.EventHandler(this.gitHubToolStripMenuItem_Click);
             // 
             // ptpOld
             // 
             this.ptpOld.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ptpOld.Location = new System.Drawing.Point(964, 10);
-            this.ptpOld.Margin = new System.Windows.Forms.Padding(4);
+            this.ptpOld.Location = new System.Drawing.Point(873, 6);
             this.ptpOld.Name = "ptpOld";
-            this.ptpOld.Size = new System.Drawing.Size(319, 299);
+            this.ptpOld.Size = new System.Drawing.Size(240, 240);
             this.ptpOld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptpOld.TabIndex = 5;
             this.ptpOld.TabStop = false;
@@ -137,12 +132,11 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
-            this.dgvList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvList.Name = "dgvList";
             this.dgvList.ReadOnly = true;
             this.dgvList.RowTemplate.Height = 23;
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvList.Size = new System.Drawing.Size(512, 695);
+            this.dgvList.Size = new System.Drawing.Size(384, 556);
             this.dgvList.TabIndex = 9;
             this.dgvList.SelectionChanged += new System.EventHandler(this.dgvList_SelectionChanged);
             // 
@@ -157,38 +151,34 @@
             "SouGou",
             "360",
             "Google"});
-            this.cobEngine.Location = new System.Drawing.Point(520, 10);
-            this.cobEngine.Margin = new System.Windows.Forms.Padding(4);
+            this.cobEngine.Location = new System.Drawing.Point(390, 42);
             this.cobEngine.Name = "cobEngine";
-            this.cobEngine.Size = new System.Drawing.Size(84, 23);
+            this.cobEngine.Size = new System.Drawing.Size(64, 20);
             this.cobEngine.TabIndex = 10;
             // 
             // flpPicture
             // 
             this.flpPicture.AutoScroll = true;
             this.flpPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flpPicture.Location = new System.Drawing.Point(520, 38);
-            this.flpPicture.Margin = new System.Windows.Forms.Padding(4);
+            this.flpPicture.Location = new System.Drawing.Point(390, 71);
             this.flpPicture.Name = "flpPicture";
-            this.flpPicture.Size = new System.Drawing.Size(435, 612);
+            this.flpPicture.Size = new System.Drawing.Size(464, 449);
             this.flpPicture.TabIndex = 11;
             this.flpPicture.TabStop = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(969, 312);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(727, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 15);
+            this.label1.Size = new System.Drawing.Size(0, 12);
             this.label1.TabIndex = 12;
             // 
             // OpenDir
             // 
-            this.OpenDir.Location = new System.Drawing.Point(964, 658);
-            this.OpenDir.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenDir.Location = new System.Drawing.Point(391, 6);
             this.OpenDir.Name = "OpenDir";
-            this.OpenDir.Size = new System.Drawing.Size(158, 29);
+            this.OpenDir.Size = new System.Drawing.Size(78, 23);
             this.OpenDir.TabIndex = 13;
             this.OpenDir.Text = "打开文件夹";
             this.OpenDir.UseVisualStyleBackColor = true;
@@ -197,19 +187,29 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(519, 665);
+            this.linkLabel1.Location = new System.Drawing.Point(389, 532);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(399, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(0, 12);
             this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://github.com/liumingye/MP3CoverOnlineUpdate";
             this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
+            // 
+            // btnUpdateAll
+            // 
+            this.btnUpdateAll.Location = new System.Drawing.Point(637, 521);
+            this.btnUpdateAll.Name = "btnUpdateAll";
+            this.btnUpdateAll.Size = new System.Drawing.Size(92, 23);
+            this.btnUpdateAll.TabIndex = 15;
+            this.btnUpdateAll.Text = "全文件夹更新";
+            this.btnUpdateAll.UseVisualStyleBackColor = true;
+            this.btnUpdateAll.Click += new System.EventHandler(this.btnUpdateAll_Click);
             // 
             // frmMp3Album
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 695);
+            this.ClientSize = new System.Drawing.Size(1129, 556);
+            this.Controls.Add(this.btnUpdateAll);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.OpenDir);
             this.Controls.Add(this.label1);
@@ -223,10 +223,9 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMp3Album";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "音频专辑封面更新";
+            this.Text = "音频专辑封面更新——Modify By Coby";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbNew)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -254,6 +253,7 @@
         private System.Windows.Forms.ToolStripMenuItem gitHubToolStripMenuItem;
         private System.Windows.Forms.Button OpenDir;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnUpdateAll;
     }
 }
 
